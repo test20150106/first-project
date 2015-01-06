@@ -17,7 +17,7 @@ exports.HelloWorldCanvas = Component.specialize(/** @lends HelloWorldCanvas# */ 
 
     draw: {
         value: function () {
-            console.log(this.element);
+            console.log(this.element.childNodes);
             //canvas.fillText("hello, world!", 20, 20);
         }
     }

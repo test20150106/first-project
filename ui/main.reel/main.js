@@ -17,13 +17,15 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     handleIncrementAction: {
         value: function (event) {
-            console.log(this.templateObjects.value.element.textContent);
+            var value = Number(this.templateObjects.value.element.textContent);
+            this.templateObjects.value.element.textContent = value + 1;
         }
     },
 
     handleDecrementAction: {
         value: function (event) {
-            console.log(this.templateObjects.value);
+            var value = Number(this.templateObjects.value.element.textContent);
+            this.templateObjects.value.element.textContent = value - 1;
         }
     }
 

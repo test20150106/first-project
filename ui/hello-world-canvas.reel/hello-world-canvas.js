@@ -17,15 +17,7 @@ exports.HelloWorldCanvas = Component.specialize(/** @lends HelloWorldCanvas# */ 
 
     draw: {
         value: function () {
-            var fragment = document.createDocumentFragment();
-            var div = document.createElement("div");
-            div.textContent = "hello, world!";
-            fragment.appendChild(div);
-            fragment.appendChild(div.cloneNode(true));
-            fragment.appendChild(div.cloneNode(true));
-            fragment.firstChild.classList.add('HelloWorldDom-left');
-            fragment.lastChild.classList.add('HelloWorldDom-right');
-            this.element.appendChild(fragment);
+            this.element.querySelector('.HelloWorldCanvas-canvas').fillText("hello, world!", 20, 20);
         }
     }
 });

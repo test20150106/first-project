@@ -17,9 +17,16 @@ exports.HelloWorldDom = Component.specialize(/** @lends HelloWorldDom# */ {
 
     draw: {
         value: function () {
+            var fragment = document.createDocumentFragment();
             var div = document.createElement("div");
             div.textContent = "hello, world!";
-            this.element.appendChild(div);
+            fragment.appendChild(div);
+            div = document.createElement("div");
+            div.textContent = "hello, world!";
+            fragment.appendChild(div);
+            div = document.createElement("div");
+            div.textContent = "hello, world!";
+            fragment.appendChild(div);
         }
     }
 });

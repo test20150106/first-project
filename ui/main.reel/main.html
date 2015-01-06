@@ -20,7 +20,14 @@
                 "enabled": true,
                 "identifier": "decrement",
                 "label": "-"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "increment": {
             "prototype": "digit/ui/button.reel",
@@ -29,7 +36,14 @@
                 "enabled": true,
                 "identifier": "increment",
                 "label": "+"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         },
         "value": {
             "prototype": "digit/ui/text.reel",

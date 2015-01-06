@@ -21,12 +21,13 @@ exports.HelloWorldDom = Component.specialize(/** @lends HelloWorldDom# */ {
             var div = document.createElement("div");
             div.textContent = "hello, world!";
             fragment.appendChild(div);
-            div = document.createElement("div");
-            div.textContent = "hello, world!";
+            div = div.cloneNode();
+            div.classList.add('.HelloWorldDom-left');
+            fragment.insertBefore(div, fragment.firstChild);
+            div = div.cloneNode();
+            div.classList.add('.HelloWorldDom-right');
             fragment.appendChild(div);
-            div = document.createElement("div");
-            div.textContent = "hello, world!";
-            fragment.appendChild(div);
+            this.element.appendChild(fragment);
         }
     }
 });

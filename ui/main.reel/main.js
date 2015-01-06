@@ -17,7 +17,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     handleIncrementAction: {
         value: function (event) {
-            console.log(this.templateObjects.value.element.value);
+            console.log(this.templateObjects.value.element.textContent);
         }
     },
 

@@ -17,7 +17,8 @@ exports.HelloWorldCanvas = Component.specialize(/** @lends HelloWorldCanvas# */ 
 
     draw: {
         value: function () {
-            this.element.querySelector('.HelloWorldCanvas-canvas').fillText("hello, world!", 20, 20);
+            var canvas = this.element.querySelector('.HelloWorldCanvas-canvas');
+            canvas.fillText("hello, world!", 20, 20);
         }
     }
 });

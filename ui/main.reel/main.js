@@ -17,11 +17,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     handleIncrementAction: {
         value: function (event) {
+            console.log(this.templateObjects.value);
         }
     },
 
     handleDecrementAction: {
         value: function (event) {
+            console.log(this.templateObjects.value);
         }
     }
 
